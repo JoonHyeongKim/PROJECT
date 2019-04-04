@@ -11,6 +11,7 @@ int sort_digits(int n);
 int main(){
 	char input[MAX_SIZE];
 	int i,is_number,reverse,sort;
+	boolean prime;
 	
 	while(fgets(input,sizeof(input),stdin)!=NULL){
 		input[strlen(input)-1]=0;
@@ -27,8 +28,8 @@ int main(){
 				}
 			}
 		if(is_number){
-			reverse=reverse_digits(atoi(input));
-			printf("reverse> %d\n",reverse);
+			prime=isPrime(atoi(input));
+			printf("isPrime> %s\n",prime);
 			sort =sort_digits(atoi(input));
 			printf("sort> %d\n",sort);
 			}
